@@ -1,0 +1,1 @@
+define(function(){var n=window.localStorage;return{set:function(e,t){t?n.setItem(e,JSON.stringify(t)):this.remove(e)},get:function(e){var t=n.getItem(e);return JSON.parse(t)},remove:function(e){n.removeItem(e)},clear:function(){n.clear()}}});
