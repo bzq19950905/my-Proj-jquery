@@ -1,0 +1,27 @@
+<script type="text/x-handlebars-template" id="header-tpl">
+    {{#if isSearch}}
+    <aside>
+        <a href="#">
+        北京
+    </a>
+        <label for="">
+        <input type="text" placeholder="输入商品">
+        <i class="icon iconfont icon-fangdajing"></i>
+    </label>
+        <a href="/page/login.html">
+            <i class="icon iconfont icon-wode"></i>
+            <span>我的</span>
+        </a>
+    </aside>
+    {{else}}
+    <div>
+        <a href="#" id="rollBack">
+            <i class="icon iconfont icon-xiangzuo"></i>
+        </a>
+        <b>美团网</b>
+        <a href="#">
+            <i class="icon iconfont icon-gengduo"></i>
+            <span>导航</span>
+        </a>
+    </div>{{/if}}
+</script>

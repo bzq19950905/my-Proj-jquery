@@ -1,0 +1,18 @@
+@import "_import.scss";
+@import "_mixin.scss";
+.wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.section {
+    flex: 1;
+    overflow: hidden;
+}
+
+.top_img {
+    @include num(100%, 3rem);
+    img {
+        @include num(100%, 100%);
+    }
+}

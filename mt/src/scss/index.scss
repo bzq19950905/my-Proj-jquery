@@ -1,0 +1,90 @@
+@import "_import.scss";
+@import "_mixin.scss";
+@import "tpl/_header.scss";
+@import "tpl/_show.scss";
+.wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.section {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+.BScroll {
+    min-height: 100%;
+    position: relative;
+}
+
+.BScroll_top,
+.BScroll_bottom {
+    @include num(100%, .5rem);
+    text-align: center;
+    line-height: .5rem;
+    position: absolute;
+}
+
+.BScroll_top {
+    left: 0;
+    top: -.5rem;
+}
+
+.BScroll_bottom {
+    left: 0;
+    bottom: -.5rem;
+}
+
+.top_img {
+    @include num(100%, 2rem);
+    border-bottom: 1px solid #ccc;
+    img {
+        @include num(100%, 100%);
+        display: block;
+    }
+}
+
+.swiper-wrapper,
+.swiper-container {
+    @include num(100%, 100%);
+}
+
+.swiper-slide {
+    height: 100%;
+    position: relative;
+}
+
+.section_nav {
+    display: none;
+    height: auto !important;
+    margin-top: .2rem !important;
+}
+
+.navActive {
+    display: flex;
+    flex-wrap: wrap;
+    a {
+        width: 20%;
+        height: auto;
+        @include flex(center);
+        flex-direction: column;
+        b {
+            width: .7rem;
+            height: .7rem;
+            display: block;
+            @include flex(center);
+            border-radius: 50%;
+            i.icon {
+                color: #fff;
+            }
+        }
+        em {
+            line-height: 2;
+            text-align: center;
+            font-size: .22rem;
+            font-weight: 800;
+            color: #000;
+        }
+    }
+}

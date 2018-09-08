@@ -1,0 +1,31 @@
+@import "_import.scss";
+@import "_mixin.scss";
+@import "tpl/_header.scss";
+.wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.login {
+    @include num(100%, auto);
+    padding: 0 .2rem;
+    label {
+        @include num(100%, .6rem);
+        border-bottom: 1px solid #ccc;
+        display: block;
+        input {
+            @include num(100%, 100%);
+            border: 0;
+        }
+    }
+}
+
+#submit {
+    @include num(100%, .6rem);
+    margin-top: .3rem;
+    background: #00C8B2;
+    text-align: center;
+    line-height: .6rem;
+    color: #FFF;
+    border: 0;
+}

@@ -1,0 +1,44 @@
+@import "../_import.scss";
+.header {
+    @include num(100%, .6rem);
+    background: #00C8B2;
+    aside {
+        @include num(100%, .6rem);
+        @include flex();
+        padding: 0 .2rem;
+        a {
+            padding: 0 .2rem;
+            @include flex(center);
+            flex-direction: column;
+            color: #fff;
+        }
+        label {
+            flex: 1;
+            position: relative;
+            input {
+                @include num(100%, .4rem);
+                border: 0;
+                padding-left: .7rem;
+            }
+            i.icon {
+                position: absolute;
+                left: .1rem;
+                top: 0;
+            }
+        }
+    }
+    div {
+        @include num(100%, .6rem);
+        @include flex();
+        padding: 0 .2rem;
+        a {
+            color: #fff;
+            @include flex(center);
+            flex-direction: column;
+        }
+        b {
+            color: #fff;
+            font-size: .24rem;
+        }
+    }
+}

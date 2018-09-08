@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/swiper-4.1.6.min.css">
+    <link rel="stylesheet" href="../css/hotel.css">
+    <link rel="stylesheet" href="../fonts/iconfont.css">
+</head>
+
+<body>
+    <div class="box">
+        <div class="wrap">
+            <div class="swiper-container slideShow">
+                <div class="swiper-wrapper" id="slideShow_To">
+
+                </div>
+                <div class="swiper-pagination pagin"></div>
+            </div>
+            <div class="form_text">
+                <div class="form_top">
+                    <span class="tab_left">
+                             全日房
+                         </span>
+                    <span class="tab_right">
+                            钟点房
+                        </span>
+                    <em class="list"></em>
+                </div>
+                <ul class="form_ul">
+                    <li>
+                        <span>
+                                  目的地
+                              </span>
+                        <b id="city">
+                               北京
+                              </b>
+                    </li>
+                    <li>
+                        <span>
+                                  时间
+                              </span>
+
+                    </li>
+                    <li>
+                        <span>
+                                    搜索
+                                </span>
+                    </li>
+                </ul>
+                <div class="form_btn">
+                    <button id="submit">
+                                查找酒店
+                            </button>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="mask">
+            <header class="mask_header">
+                <span id="rollBack">
+                            X
+                        </span>
+                <label for="">
+                            <input type="text" placeholder="位置">
+                            <i class="icon iconfont icon-fangdajing"></i>
+                        </label>
+            </header>
+            <section class="mask_section">
+
+                <ol class="mask_city">
+
+                </ol>
+                <ul class="mask_right">
+
+
+                </ul>
+                <script type="text/x-handlebars-template" id="city-tpl">
+                    {{#each this}}
+                    <li>
+                        <h1>
+                            {{initial}}
+                        </h1>
+                        <ul>
+                            {{#each list}}
+                            <li data-id="{{zip}}">
+                                {{name}}
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </li>
+
+                    {{/each}}
+                </script>
+                <script type="text/x-handlebars-template" id="city-tpl-right">
+                    {{#each this}}
+                    <li> {{initial}}</li>
+                    {{/each}}
+                </script>
+            </section>
+            <footer class="mask_footer">
+
+            </footer>
+
+        </div>
+    </div>
+    <script src="../js/libs/require.js"></script>
+    <script>
+        require(['../js/main.js'], function() {
+            require(['hotel'])
+        })
+    </script>
+</body>
+
+</html>

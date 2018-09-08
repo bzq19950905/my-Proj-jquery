@@ -1,0 +1,194 @@
+@import "_import.scss";
+@import "_mixin.scss";
+body {
+    background: #F0EFED;
+}
+
+.slideShow {
+    width: 100%;
+    height: 3.5rem;
+    position: relative;
+    .pagin {
+        position: absolute;
+        bottom: 1.2rem;
+        left: 0;
+    }
+}
+
+.form_text {
+    width: 95%;
+    height: 55%;
+    background: #fff;
+    position: absolute;
+    left: 2.5%;
+    top: 2.5rem;
+    z-index: 99;
+    border-radius: 0 0 .15rem .15rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form_top {
+    @include num(84%, .8rem);
+    position: relative;
+    margin-left: 8%;
+    display: flex;
+    span {
+        flex: 1;
+        text-align: center;
+        line-height: .8rem;
+        font-size: .3rem;
+    }
+    em {
+        position: absolute;
+        width: 50%;
+        height: .1rem;
+        background: #06C1AE;
+        border-radius: .05rem;
+        left: 0;
+        bottom: 0;
+        transition: 1s;
+    }
+}
+
+.form_ul {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-top: .1rem;
+    border-top: 1px solid #ccc;
+    li {
+        width: 95%;
+        margin-left: 2.5%;
+        flex: 1;
+        border-bottom: 1px solid #ccc;
+        display: flex;
+        align-items: center;
+        span {
+            font-size: .26rem;
+            color: #CACACA;
+            margin-right: .2rem;
+        }
+        b {
+            flex: 1;
+            font-size: .22rem;
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+.form_btn {
+    @include num(100%, 1rem);
+    @include flex(center);
+    button {
+        width: 95%;
+        height: .7rem;
+        background: #2BB2A3;
+        text-align: center;
+        line-height: .7rem;
+        color: #fff;
+        border-radius: .2rem;
+        border: 0;
+    }
+}
+
+.box {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.mask {
+    @include num(100%, 100%);
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateY(100%);
+    transition: 1s;
+    background: #F7F7F7;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+}
+
+.mask_toggle {
+    top: 0 !important;
+    display: flex !important;
+}
+
+.mask_header {
+    @include num(100%, .7rem);
+    padding: 0 .2rem;
+    @include flex();
+    span {
+        font-size: .28rem;
+        color: #09C2AF;
+        padding: 0 .2rem;
+    }
+    label {
+        margin-left: .1rem;
+        flex: 1;
+        height: .5rem;
+        position: relative;
+        input {
+            @include num(100%, 100%);
+            padding-left: .6rem;
+            border: 0;
+        }
+        i.icon {
+            position: absolute;
+            left: .1rem;
+            top: .1rem;
+        }
+    }
+}
+
+.mask_section {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+.mask_city {
+    min-height: 100%;
+    h1 {
+        line-height: 2;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        color: #C8C8C8;
+        padding-left: .1rem;
+    }
+    ul {
+        background: #fff;
+        li {
+            width: 95%;
+            margin-left: 5%;
+            line-height: 2.5;
+            border-bottom: 1px solid #ccc;
+            font-size: .26rem;
+            font-weight: 700;
+        }
+    }
+}
+
+.mask_right {
+    position: absolute;
+    top: 50%;
+    right: .4rem;
+    transform: translateY(-50%);
+    background: rgba(200, 200, 200, .5);
+    display: flex;
+    flex-direction: column;
+    border-radius: .2rem;
+    padding: .15rem 0;
+    li {
+        width: .3rem;
+        height: .3rem;
+        text-align: center;
+        line-height: .3rem;
+        color: #FFF;
+    }
+}

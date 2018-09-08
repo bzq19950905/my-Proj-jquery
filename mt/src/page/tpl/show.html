@@ -1,0 +1,38 @@
+<script type="text/x-handlebars-template" id="show-tpl">
+    {{#each this}}
+    <dl>
+        <dt>
+          <img src="{{img}}" alt="">
+         </dt>
+        <dd>
+            <h1>
+                {{shop}}
+            </h1>
+            <div>
+                <span>
+                      {{sale}}
+                  </span>
+                <span>
+                      {{saleDetail}}
+                  </span>
+            </div>
+            <aside>
+
+                <b>
+                <span>
+                    {{price}}
+                </span>
+                    元
+                 </b>
+                <em>
+                    门市价:{{priceSale}}
+                 </em>
+
+                <h2>
+                    已售{{work}}
+                </h2>
+            </aside>
+        </dd>
+    </dl>
+    {{/each}}
+</script>

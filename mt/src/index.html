@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="fonts/iconfont.css">
+    <link rel="stylesheet" href="css/swiper-4.1.6.min.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <header class="header">
+
+        </header>
+        <section class="section">
+            <div class="BScroll">
+                <div class="BScroll_top">
+                    下拉刷新
+                </div>
+                <div class="top_img">
+                    <img src="img/pic.1.png" alt="">
+                </div>
+                <div class="swiper-container section_nav">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide navActive" id="html_1">
+
+                        </div>
+                        <div class="swiper-slide navActive" id="html_2">
+
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="handle-show" id="handle-show-tpl">
+
+                </div>
+
+
+                <div class="BScroll_bottom">
+                    上拉加载...
+                </div>
+
+            </div>
+        </section>
+        <footer class="footer">
+
+        </footer>
+    </div>
+    <script src="js/libs/require.js"></script>
+    <script>
+        require(['js/main.js'], function() {
+            require(['index'])
+        })
+    </script>
+</body>
+
+
+</html>
